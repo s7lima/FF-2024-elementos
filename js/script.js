@@ -1,4 +1,4 @@
-// exemplo anterior so olhar nos commits ateriores
+// exemplo anterior so olhar nos commits ateriores.
 
 function aoClicar (){
     let campo = document.querySelector('#meuCampo');
@@ -9,4 +9,4 @@ function aoClicar (){
 let botao = document.querySelector('.btnExibaValor');
 botao.addEventListener('click', aoClicar);
 
-// exemplo anterior so olhar nos commits ateriores
+// exemplo anterior so olhar nos commits ateriores.
