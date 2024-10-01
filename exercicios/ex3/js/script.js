@@ -1,20 +1,24 @@
-function somar() {
-    let nota1 = document.querySelector('.nota1').value;
-    let nota2 = document.querySelector('.nota2').value;
-    let nota3 = document.querySelector('.nota3').value;
-    let nota4 = document.querySelector('.nota4').value;
-    
-    nota1 = parseInt(numero1);
-    nota2 = parseInt(numero2);
-    nota3 = parseInt(numero3);
-    nota4 = parseInt(numero4);
+function lerExibirResultado(params) {
+    let nota1 = parseFloat(document.querySelector(".num1").value);
+    let nota2 = parseFloat(document.querySelector(".num2").value);
 
-    let soma = nota1 + nota2 + nota3 + nota4;
+    let media = (nota1 + nota2) / 2;
 
-    pResulado = document.querySelector("#resultado");
+    let resultado = "";
+    if(media < 5) {
+        resultado = "Reprovado";
+    }
+    else if (media < 7) {
+        resultado = "Recuperação";
+    }
+    else {
+        resultado = "Aprovado";
+    }
 
-    pResulado.innerHTML = `${nota1} + ${nota2} + ${nota3} + ${nota4}  = ${soma}`;
+    let paragrafo = document.querySelector("#resultado");
+    paragrafo.innerHTML = `O aluno de média ${media.toFixed(2)} esta ${resultado}`;
+
 }
 
-let botao = document.querySelector("button");
-botao.addEventListener('click', somar);
+let botao = document.querySelector('button');
+botao.addEventListener("click",lerExibirResultado);
