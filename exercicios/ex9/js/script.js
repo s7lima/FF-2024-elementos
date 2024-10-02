@@ -1,13 +1,19 @@
-function calcularresultado() {
-    let nome = document.querySelector('#nome').value;
-    let valorHora = parseFloat(document.querySelector('#valorhora').value);
-    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+function verificarEntrada() {
+    let idade = parseFloat(document.querySelector('#idade').value);
+    let altura = parseFloat(document.querySelector('#altura').value);
 
-    let resultado = valorHora * quantHora;
+    let resultado ="";
 
-    document.querySelector("#resultado").innerHTML = 
-    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
+    if ((altura >= 1.70) || (altura >= 1.60) && (idade >= 18)) {
+        resultado = "Pode passar"
+    } else {
+        resultado = "Não pode passar"
+    }
+        
+    let h1 = document.querySelector("h1");
+    h1.innerHTML = resultado;
     
 }
 
-document.querySelector('.btn').addEventListener('click', calcularresultado);
+document.querySelector('.btn').addEventListener('click', verificarEntrada);
+
