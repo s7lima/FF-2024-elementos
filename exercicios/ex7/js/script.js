@@ -1,16 +1,19 @@
-function somar() {
-    let numero1 = document.querySelector('.num1').value;
-    let numero2 = document.querySelector('.num2').value;
+function exibirMaior() {
+    let num1 = parseFloat(document.querySelector("#num1").value);
+    let num2 = parseFloat(document.querySelector("#num2").value);
+    let num3 = parseFloat(document.querySelector("#num3").value);
+
+    let resultado = "";
     
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
+    let menor = Math.min(num1, num2, num3);
+    let maior = Math.max(num1, num2, num3);
 
-    let soma = numero1 + numero2;
+    resultado = `${maior} é maior!`;
+    resultado += `${menor} é menor!`;
 
-    pResulado = document.querySelector("#resultado");
+    document.querySelector("#resultado").innerHTML =resultado;
 
-    pResulado.innerHTML = `${numero1} + ${numero2} = ${soma}`;
 }
-
-let botao = document.querySelector("button");
-botao.addEventListener('click', somar);
+ 
+document.querySelector(".btn")
+.addEventListener('click', exibirMaior);
