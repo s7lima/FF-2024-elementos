@@ -1,16 +1,24 @@
-function somar() {
-    let numero1 = document.querySelector('.num1').value;
-    let numero2 = document.querySelector('.num2').value;
-    
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
+function exibirSemana() {
+    let dsemana = document.querySelector("#diaSemana").value;
+    let resultado = "";
+    if (dsemana == "1") 
+        resultado = "Domingo";
+    else if (dsemana == "2")
+        resultado = "Segunda-feira";
+    else if (dsemana == "3")
+        resultado = "Terça-feira";
+    else if (dsemana == "4")
+        resultado = "Quarta-feira";
+    else if (dsemana == "5")
+        resultado = "Quinta-feira";
+    else if (dsemana == "6")
+        resultado = "Sexta-feira";
+    else 
+        resultado = "Sábado";  
 
-    let soma = numero1 + numero2;
-
-    pResulado = document.querySelector("#resultado");
-
-    pResulado.innerHTML = `${numero1} + ${numero2} = ${soma}`;
+    let h1 = document.querySelector("h1");
+    h1.innerHTML = resultado;
 }
 
-let botao = document.querySelector("button");
-botao.addEventListener('click', somar);
+document.querySelector('button') 
+.addEventListener('click', exibirSemana)
