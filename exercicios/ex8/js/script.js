@@ -1,16 +1,13 @@
-function somar() {
-    let numero1 = document.querySelector('.num1').value;
-    let numero2 = document.querySelector('.num2').value;
+function calcularresultado() {
+    let nome = document.querySelector('#nome').value;
+    let valorHora = parseFloat(document.querySelector('#valorhora').value);
+    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+
+    let resultado = valorHora * quantHora;
+
+    document.querySelector("#resultado").innerHTML = 
+    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
     
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
-
-    let soma = numero1 + numero2;
-
-    pResulado = document.querySelector("#resultado");
-
-    pResulado.innerHTML = `${numero1} + ${numero2} = ${soma}`;
 }
 
-let botao = document.querySelector("button");
-botao.addEventListener('click', somar);
+document.querySelector('.btn').addEventListener('click', calcularresultado);
