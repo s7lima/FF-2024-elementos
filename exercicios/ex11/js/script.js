@@ -1,13 +1,30 @@
-function calcularresultado() {
-    let nome = document.querySelector('#nome').value;
-    let valorHora = parseFloat(document.querySelector('#valorhora').value);
-    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+let turnoEscola = `Escolha um turno que você estuda:
+                M - matutino
+                V - vespertino
+                N - noturno`
 
-    let resultado = valorHora * quantHora;
+let turno = document.querySelector("#turno").value;
 
-    document.querySelector("#resultado").innerHTML = 
-    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
-    
+resultado =""
+
+switch (turno) {
+    case m:
+        resultado = "Matutino"
+        break;
+    case v:
+        resultado = "Vespertino"
+        break;
+    case n:
+        resultado = "Noturno"
+        break;
+
+    default:
+        resultado = "Invalido"
+        break;
+
 }
 
-document.querySelector('.btn').addEventListener('click', calcularresultado);
+let h1 = document.querySelector("h1");
+    h1.innerHTML = resultado;
+
+document.querySelector('.btn').addEventListener('click', verificarEntrada);
