@@ -1,30 +1,22 @@
-let turnoEscola = `Escolha um turno que você estuda:
-                M - matutino
-                V - vespertino
-                N - noturno`
+function exibirTurno(params) {
+    let turno = document.querySelector("#turno").value;
 
-let turno = document.querySelector("#turno").value;
+    resultado = ""
+    matutino = "Bom-Dia!"
+    vespertino = "Boa-Tarde!"
+    noturno = "Boa-Noite!"
+    invalido = "Valor Invalido!"
 
-resultado =""
-
-switch (turno) {
-    case m:
-        resultado = "Matutino"
-        break;
-    case v:
-        resultado = "Vespertino"
-        break;
-    case n:
-        resultado = "Noturno"
-        break;
-
-    default:
-        resultado = "Invalido"
-        break;
-
+    if ((turno === "m") || (turno === "M")){
+        resultado = ` ${matutino}`
+    } else if ((turno === "v") || (turno === "V")){
+        resultado = `  ${vespertino}`
+    } else if ((turno === "n") || (turno === "N")){
+        resultado = `  ${noturno}`
+    } else {
+        resultado = `${invalido}`
+    }               
+    document.querySelector("#resultado").innerHTML = resultado;
 }
 
-let h1 = document.querySelector("h1");
-    h1.innerHTML = resultado;
-
-document.querySelector('.btn').addEventListener('click', verificarEntrada);
+document.querySelector(".btn").addEventListener('click', exibirTurno);
