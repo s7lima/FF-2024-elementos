@@ -15,7 +15,7 @@ function exibirMaior() {
 
     // Exibir resultado com nome!!!
     let resultado = "";
-    if ((valor1 <= valor2) && (valor1 <= valor2))
+    if ((valor1 <= valor2) && (valor1 <= valor3))
         resultado = ` ${produto1}, custa R$ ${valor1} é o menor valor!`
     else if ((valor2 <= valor1) && (valor2 <= valor3))
         resultado = `  ${produto2}, custa R$ ${valor2} é o menor valor!`
