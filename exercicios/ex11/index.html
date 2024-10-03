@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Exercicio 11</title>
 </head>
+
 <body>
 
-    <header>
-        <h2>Escolha um dos horários que você estuda!</h2>
-    <p>Escolha apenas a primeira letra!</p>
-    <ul>
-        <li>M - Matutino</li>
-        <li>V - Vespertino</li>
-        <li>N - Noturno</li>
-    </ul>
-    </header>
-    
-    <input type="text" id="turno" placeholder="Digite um turno"><br><br>
+    <section class="container">
+        <div class="row">
+            <h1>Sistema para Bom dia, Boa tarde e Boa noite!</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-4 m-2">
+                <label for="turno">Informe M-Matutino, V-Vespertino e N-Noturno:</label>
+                <input class="form-control" id="turno" type="text" placeholder="Informe o turno...">
+            </div>
+        </div>
 
-    <button type="button" class="btn">Turno</button>
+        <div class="row">
+            <div class="col-4 m-2">
+                <div class="row">
+                    <div class="d-grid col-12 mx-auto">
+                        <button class="btn btn-dark" type="button">Verificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2></h2>
+        </section>
+    </section>
 
-    <h1 id="resultado" ></h1>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
