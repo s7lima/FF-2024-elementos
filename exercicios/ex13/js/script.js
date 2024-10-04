@@ -1,13 +1,16 @@
-function calcularresultado() {
-    let nome = document.querySelector('#nome').value;
-    let valorHora = parseFloat(document.querySelector('#valorhora').value);
-    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+function calcular() {
+    let temperatura = parseFloat(document.querySelector('#temperatura').value);
+    let converter = document.querySelector("#operador").value;
 
-    let resultado = valorHora * quantHora;
-
-    document.querySelector("#resultado").innerHTML = 
-    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
-    
+    switch (converter) {
+        case "C":
+            document.querySelector('h2').innerHTML = `A temperatura em Celsius é ${((temperatura - 32) * 5/9) }`;
+            break;
+        case "F":
+            document.querySelector('h2').innerHTML = `A temperatura em Fahrenheit é ${((temperatura * 9/5) + 32)}`;
+            break;
+        
+    }
 }
-
-document.querySelector('.btn').addEventListener('click', calcularresultado);
+document.querySelector('button')
+        .addEventListener('click', calcular);
