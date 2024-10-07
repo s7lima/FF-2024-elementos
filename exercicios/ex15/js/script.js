@@ -1,13 +1,17 @@
-function calcularresultado() {
-    let nome = document.querySelector('#nome').value;
-    let valorHora = parseFloat(document.querySelector('#valorhora').value);
-    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+function verificarUsuarioSenha() {
+    let usuario = document.querySelector('#usuario').value;
+    let senha = document.querySelector("#senha").value;
 
-    let resultado = valorHora * quantHora;
-
-    document.querySelector("#resultado").innerHTML = 
-    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
+    if (usuario === senha) {
+        alert("A senha não deve ser igual ao login!")
+        document.querySelector('#nome').value = "";
+        document.querySelector("#senha").value = "";
+    } else {
+        alert("Logado com sucesso!")
+    }
     
-}
+    }
 
-document.querySelector('.btn').addEventListener('click', calcularresultado);
+
+document.querySelector('button')
+.addEventListener('click', verificarUsuarioSenha);
