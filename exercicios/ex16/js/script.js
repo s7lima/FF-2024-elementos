@@ -1,13 +1,26 @@
-function calcularresultado() {
-    let nome = document.querySelector('#nome').value;
-    let valorHora = parseFloat(document.querySelector('#valorhora').value);
-    let quantHora = parseFloat(document.querySelector('#quanthora').value);
+function gerarTabuada () {
+    let numero = document.querySelector("#num").value;
 
-    let resultado = valorHora * quantHora;
+    let msgTabuada = ""
+    for (let i = 1; i <= 10; i++ ) {
+        msgTabuada += `${numero} X ${i} = ${numero * i} <br>`;
+        
+    }
+    document.querySelector('#resultado').innerHTML = msgTabuada;
 
-    document.querySelector("#resultado").innerHTML = 
-    `O valor recebido do trabalhador ${nome} é  R$ ${resultado.toFixed(2)}`;
-    
+
 }
 
-document.querySelector('.btn').addEventListener('click', calcularresultado);
+function perguntar() {
+    let repetir = confirm("Deseja Gerar outra tabuada?");
+    if (repetir) {
+        document.querySelector('#resultado').innerHTML = ""; 
+        document.querySelector('#num').value = ""; 
+    } else {
+        document.querySelector('#num').disabled = true; 
+        document.querySelector('button').disabled = true; 
+    }
+}
+
+document.querySelector('button')
+.addEventListener('click', gerarTabuada)
