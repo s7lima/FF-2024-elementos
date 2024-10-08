@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +7,40 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
     <section class="container">
         <div class="row">
-            <h1>Informe um número para cálculo</h1>
+            <h1>Mostrar Tabuada</h1>
         </div>
         <br>
         <div class="row">
             <div class="col-4 m-2">
-                <label for="num">Número:</label>
-                <input class="form-control" id="num" type="text" placeholder="Digite um número">
+                <input class="form-control" 
+                       id="numero" type="text" 
+                       placeholder="Informe o número...">
                 <br>
             </div>
         </div>
-
         <div class="row">
             <div class="col-4 m-2">
                 <div class="row">
                     <div class="d-grid col-12 mx-auto">
-                        <button class="btn btn-primary" id="calcularBtn" type="button">Calcular</button>
+                        <button class="btn btn-primary" type="button">
+                            Gerar
+                        </button>
+                        <button class="btn btn-dark" disabled type="button">
+                            Gerar Outra
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
         <section>
-            <h2>Tabuada:</h2>
-            <h5 id="resultado"></h5>
+            <h5></h5>
         </section>
     </section>
-
     <script src="js/bootstrap.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
