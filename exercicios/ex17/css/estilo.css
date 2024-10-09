@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.inicio {
+    text-align: center;
+}
+
+.valor {
+    text-align: center;
+}
+
+.botao {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+
+}
+
+.valor {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+.btn {
+    margin-top: 10px;
+}

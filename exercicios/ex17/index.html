@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 17</title>
+    <title>Exercício 17</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
+    <section class="container">
+        <div class="inicio">
+            <h1>Tabela valor pão</h1>
+        </div>
+        <div class="valor">
+            <input class="form-control" id="numero" type="text" placeholder="Informe o preço do pão">
+        </div>
+        <div class="botao">
+            <button class="btn" type="button">Gerar</button>
+        </div>
+        <section>
+            <table id="tabela-resultados" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                    <!-- Os resultados serão inseridos aqui -->
+                </tbody>
+            </table>
+        </section>
+    </section>
     <script src="js/script.js"></script>
 </body>
+
 </html>
